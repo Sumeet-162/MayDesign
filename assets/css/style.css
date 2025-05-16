@@ -732,14 +732,13 @@ main {
 }
 
 @media (max-width: 768px) {
-  .avatar-box1{
+  .badge-box{
     margin-bottom: 35px;
   }
 }
-
-/* .testimonials-avatar-box2 img{
-  padding: 2px;
-} */
+.testimonials-avatar-box img{
+  padding: 10px;
+}
 
 /**
  * #clients 
@@ -751,8 +750,8 @@ main {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 15px;
-  margin: 0 -15px;
+  /* gap: 15px; */
+  /* margin: 0 -15px; */
   padding: 25px;
   padding-bottom: 25px;
   overflow-x: auto;
@@ -775,8 +774,11 @@ main {
 
 .clients-item img:hover { filter: grayscale(0); }
 
-
-
+@media (max-width: 768px) {
+  .clients-item img {
+    width: 50px;
+  }
+}
 
 
 /*-----------------------------------*\
