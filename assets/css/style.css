@@ -356,6 +356,14 @@ main {
   border-radius: 8px;
 }
 
+.info-content .role ,title{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+}
+
 .info_more-btn {
   position: absolute;
   top: -15px;
@@ -723,6 +731,15 @@ main {
   line-height: 1.6;
 }
 
+@media (max-width: 768px) {
+  .avatar-box1{
+    margin-bottom: 35px;
+  }
+}
+
+/* .testimonials-avatar-box2 img{
+  padding: 2px;
+} */
 
 /**
  * #clients 
