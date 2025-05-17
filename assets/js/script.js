@@ -115,12 +115,31 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 
 
+// // contact form variables
+// const form = document.querySelector("[data-form]");
+// const formInputs = document.querySelectorAll("[data-form-input]");
+// const formBtn = document.querySelector("[data-form-btn]");
+
+// // add event to all form input field
+// for (let i = 0; i < formInputs.length; i++) {
+//   formInputs[i].addEventListener("input", function () {
+
+//     // check form validation
+//     if (form.checkValidity()) {
+//       formBtn.removeAttribute("disabled");
+//     } else {
+//       formBtn.setAttribute("disabled", "");
+//     }
+
+//   });
+// }
+
 // contact form variables
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
-// add event to all form input field
+// add event to all form input fields
 for (let i = 0; i < formInputs.length; i++) {
   formInputs[i].addEventListener("input", function () {
 
@@ -133,6 +152,17 @@ for (let i = 0; i < formInputs.length; i++) {
 
   });
 }
+
+// reset form after submission
+form.addEventListener("submit", function (e) {
+  // Allow normal submission to happen, then clear inputs
+  setTimeout(() => {
+    form.reset();
+    formBtn.setAttribute("disabled", ""); // disable button after reset
+  }, 100);
+});
+
+
 
 
 
